@@ -45,6 +45,8 @@ function Lab5(app) {
       app.get("/a5/assignment/score", (req, res) => {
         res.json(assignment.score);
       });
+
+      //EXTRA CREDIT
       // need to type other title and it will change the title of the object. 
       app.get("/a5/assignment/score/:newScore", (req, res) => {
         const { newScore } = req.params;
@@ -68,8 +70,35 @@ function Lab5(app) {
         }
       
       });
+
+      // This is  Passing JSON data to a Server in an HTTP Body
+      // we use post if we creating data
+
+      app.post("/a5/todos", (req, res) => {
+        const newTodo = {
+            id: new Date().getTime(),
+            ...req.body,
+            completed: false,
+        };
+        todos.push(newTodo);
+        res.json(todos);
+    }); // does not know req.body since it could be anything. we need Json Parsing
+
+    app.delete("/a5/todos/:id", (req, res) => {
+        const{id} = req.params;
+        const index = todos.findIndex((todo) => todo.id === parseInt(id));
+        if(index === -1){  
+            res.sendStatus(404).send("Todo not found");
+            return;
+        }
+        // at index (start) remove (1) 
+        // todos.spice(index,1, newTodo) : at index remove 1, and replace with newTodo
+        todos.splice(index, 1);
+        res.json(todos);
+    });
+
       
-      // ARRAYS
+      // ARRAYS After this line
       
     //   app.get("/a5/todos", (req, res) => {
     //     res.json(todos);
@@ -200,6 +229,28 @@ function Lab5(app) {
     app.get("/a5/subtract/:a/:b", (req, res) => {
         const{ a,b,}   = req.params;
         res.send(`${a} - ${b} = ${parseInt(a)- parseInt(b)}`);
+    });
+
+    //Extra CREDIT
+    app.get("/a5/todos/:id/completed/:completed", (req, res) => {
+        const { id, completed } = req.params;
+        const todo = todos.find((todo) => todo.id === parseInt(id));
+        if (!todo) {
+          res.sendStatus(404).send("Todo not found");
+          return;
+        }
+        todo.completed = completed === "true";
+        res.json(todo);
+    });
+    app.get("/a5/todos/:id/description/:description", (req, res) => {
+        const { id, description } = req.params;
+        const todo = todos.find((todo) => todo.id === parseInt(id));
+        if (!todo) {
+          res.sendStatus(404).send("Todo not found");
+          return;
+        }
+        todo.completed = completed === "true";
+        res.json(todo);
     });
  
     
