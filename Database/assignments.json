@@ -1,0 +1,213 @@
+[
+  {
+    "_id": "A101",
+    "title": "HTML Assignment",
+    "course": "RS101",
+    "startDate": "01/10/2023",
+    "dueDate": "02/14/2023"
+  },
+  {
+    "_id": "A104",
+    "title": "Fuel Efficiency Studies",
+    "course": "RS101",
+    "startDate": "05/05/2024",
+    "dueDate": "06/05/2024"
+  },
+  {
+    "_id": "A105",
+    "title": "Engine Maintenance Workshop",
+    "course": "RS101",
+    "startDate": "06/10/2024",
+    "dueDate": "07/01/2024"
+  },
+  {
+    "_id": "A102",
+    "title": "CSS Analysis",
+    "course": "RS101",
+    "startDate": "02/01/2023",
+    "dueDate": "03/01/2023"
+  },
+  {
+    "_id": "A103",
+    "title": "REACT Project",
+    "course": "RS101",
+    "startDate": "01/15/2023",
+    "dueDate": "02/20/2023"
+  },
+  {
+    "_id": "A201",
+    "title": "SQL Quiz",
+    "course": "RS102",
+    "startDate": "01/22/2023",
+    "dueDate": "02/10/2023"
+  },
+  {
+    "_id": "A202",
+    "title": "Flowchart Analysis",
+    "course": "RS102",
+    "startDate": "03/02/2023",
+    "dueDate": "04/01/2023"
+  },
+  {
+    "_id": "A203",
+    "title": "Data Analysis",
+    "course": "RS102",
+    "startDate": "04/10/2023",
+    "dueDate": "05/05/2023"
+  },
+  {
+    "_id": "A301",
+    "title": "Structural Design Task",
+    "course": "RS103",
+    "startDate": "05/15/2023",
+    "dueDate": "06/15/2023"
+  },
+  {
+    "_id": "A302",
+    "title": "Run time Calculations",
+    "course": "RS103",
+    "startDate": "06/20/2023",
+    "dueDate": "07/20/2023"
+  },
+  {
+    "_id": "A303",
+    "title": "Systems Engineering Exam",
+    "course": "RS103",
+    "startDate": "07/25/2023",
+    "dueDate": "08/15/2023"
+  },
+  {
+    "_id": "A401",
+    "title": "Web Security Analysis",
+    "course": "RS104",
+    "startDate": "08/20/2023",
+    "dueDate": "09/20/2023"
+  },
+  {
+    "_id": "A402",
+    "title": "Incident Response Challenge",
+    "course": "RS104",
+    "startDate": "09/25/2023",
+    "dueDate": "10/15/2023"
+  },
+  {
+    "_id": "A403",
+    "title": "Forensics Lab",
+    "course": "RS104",
+    "startDate": "10/20/2023",
+    "dueDate": "11/10/2023"
+  },
+  {
+    "_id": "A501",
+    "title": "Network Topology Design",
+    "course": "RS105",
+    "startDate": "11/15/2023",
+    "dueDate": "12/05/2023"
+  },
+  {
+    "_id": "A502",
+    "title": "Supersonic Testing",
+    "course": "RS105",
+    "startDate": "12/10/2023",
+    "dueDate": "01/10/2024"
+  },
+  {
+    "_id": "A503",
+    "title": "TCP/IP Lab",
+    "course": "RS105",
+    "startDate": "01/15/2024",
+    "dueDate": "02/05/2024"
+  },
+  {
+    "_id": "A601",
+    "title": "Software Architecture Design",
+    "course": "RS106",
+    "startDate": "02/10/2024",
+    "dueDate": "03/10/2024"
+  },
+  {
+    "_id": "A602",
+    "title": "Mission Planning Simulation",
+    "course": "RS106",
+    "startDate": "03/15/2024",
+    "dueDate": "04/05/2024"
+  },
+  {
+    "_id": "A603",
+    "title": "Code Quality Review",
+    "course": "RS106",
+    "startDate": "04/10/2024",
+    "dueDate": "05/01/2024"
+  },
+
+  {
+    "_id": "A204",
+    "title": "Wind Tunnel Experiments",
+    "course": "RS102",
+    "startDate": "07/05/2024",
+    "dueDate": "08/05/2024"
+  },
+  {
+    "_id": "A205",
+    "title": "Flight Dynamics Seminar",
+    "course": "RS102",
+    "startDate": "08/10/2024",
+    "dueDate": "09/01/2024"
+  },
+  {
+    "_id": "A304",
+    "title": "Launch Systems Workshop",
+    "course": "RS103",
+    "startDate": "09/05/2024",
+    "dueDate": "10/05/2024"
+  },
+  {
+    "_id": "A305",
+    "title": "Satellite Communications Task",
+    "course": "RS103",
+    "startDate": "10/10/2024",
+    "dueDate": "11/01/2024"
+  },
+  {
+    "_id": "A404",
+    "title": "Malware Analysis Lab",
+    "course": "RS104",
+    "startDate": "11/05/2024",
+    "dueDate": "12/05/2024"
+  },
+  {
+    "_id": "A405",
+    "title": "Encryption Protocols Study",
+    "course": "RS104",
+    "startDate": "12/10/2024",
+    "dueDate": "01/10/2025"
+  },
+  {
+    "_id": "A504",
+    "title": "Wireless Protocols Analysis",
+    "course": "RS105",
+    "startDate": "01/15/2025",
+    "dueDate": "02/05/2025"
+  },
+  {
+    "_id": "A505",
+    "title": "Router Configuration Lab",
+    "course": "RS105",
+    "startDate": "02/10/2025",
+    "dueDate": "03/02/2025"
+  },
+  {
+    "_id": "A604",
+    "title": "Agile Development Workshop",
+    "course": "RS106",
+    "startDate": "03/05/2025",
+    "dueDate": "04/05/2025"
+  },
+  {
+    "_id": "A605",
+    "title": "Debugging Session",
+    "course": "RS106",
+    "startDate": "04/10/2025",
+    "dueDate": "05/01/2025"
+  }
+]

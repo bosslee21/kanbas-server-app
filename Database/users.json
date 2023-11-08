@@ -1,0 +1,183 @@
+[
+  {
+    "_id": "121",
+    "username": "iron_man",
+    "password": "stark123",
+    "firstName": "Tony",
+    "lastName": "Stark",
+    "email": "tony@stark.com",
+    "dob": "1970-05-29",
+    "role": "STUDENT"
+  },
+  {
+    "_id": "122",
+    "username": "dark_knight",
+    "password": "wayne123",
+    "firstName": "Bruce",
+    "lastName": "Wayne",
+    "email": "bruce@wayne.com",
+    "dob": "1972-02-19",
+    "role": "STUDENT"
+  },
+  {
+    "_id": "123",
+    "username": "capt_america",
+    "password": "rogers123",
+    "firstName": "Steve",
+    "lastName": "Rogers",
+    "email": "steve@avengers.com",
+    "dob": "1918-07-04",
+    "role": "STUDENT"
+  },
+  {
+    "_id": "124",
+    "username": "black_widow",
+    "password": "romanoff123",
+    "firstName": "Natasha",
+    "lastName": "Romanoff",
+    "email": "natasha@avengers.com",
+    "dob": "1984-11-22",
+    "role": "STUDENT"
+  },
+  {
+    "_id": "125",
+    "username": "thor_odinson",
+    "password": "mjolnir123",
+    "firstName": "Thor",
+    "lastName": "Odinson",
+    "email": "thor@asgard.com",
+    "dob": "982-05-25",
+    "role": "STUDENT"
+  },
+  {
+    "_id": "126",
+    "username": "hulk_smash",
+    "password": "banner123",
+    "firstName": "Bruce",
+    "lastName": "Banner",
+    "email": "bruce@avengers.com",
+    "dob": "1969-12-18",
+    "role": "STUDENT"
+  },
+  {
+    "_id": "127",
+    "username": "ring_bearer",
+    "password": "shire123",
+    "firstName": "Frodo",
+    "lastName": "Baggins",
+    "email": "frodo@shire.com",
+    "dob": "1368-09-22",
+    "role": "FACULTY"
+  },
+  {
+    "_id": "128",
+    "username": "strider",
+    "password": "aragorn123",
+    "firstName": "Aragorn",
+    "lastName": "Elessar",
+    "email": "aragorn@gondor.com",
+    "dob": "2931-03-01",
+    "role": "FACULTY"
+  },
+  {
+    "_id": "129",
+    "username": "elf_archer",
+    "password": "legolas123",
+    "firstName": "Legolas",
+    "lastName": "Greenleaf",
+    "email": "legolas@mirkwood.com",
+    "dob": "2879-07-15",
+    "role": "FACULTY"
+  },
+
+  {
+    "_id": "130",
+    "username": "web_slinger",
+    "password": "parker123",
+    "firstName": "Peter",
+    "lastName": "Parker",
+    "email": "peter@dailybugle.com",
+    "dob": "2001-08-10",
+    "role": "STUDENT"
+  },
+  {
+    "_id": "131",
+    "username": "wonder_woman",
+    "password": "diana123",
+    "firstName": "Diana",
+    "lastName": "Prince",
+    "email": "diana@themyscira.com",
+    "dob": "1941-10-25",
+    "role": "FACULTY"
+  },
+  {
+    "_id": "132",
+    "username": "cyber_savior",
+    "password": "connor123",
+    "firstName": "John",
+    "lastName": "Connor",
+    "email": "john@resistance.net",
+    "dob": "1985-02-28",
+    "role": "STUDENT"
+  },
+  {
+    "_id": "133",
+    "username": "galactic_scoundrel",
+    "password": "solo123",
+    "firstName": "Han",
+    "lastName": "Solo",
+    "email": "han@millenniumfalcon.com",
+    "dob": "1942-07-13",
+    "role": "STUDENT"
+  },
+  {
+    "_id": "134",
+    "username": "jedi_knight",
+    "password": "skywalker123",
+    "firstName": "Luke",
+    "lastName": "Skywalker",
+    "email": "luke@jediorder.com",
+    "dob": "1951-09-25",
+    "role": "FACULTY"
+  },
+  {
+    "_id": "135",
+    "username": "lion_king",
+    "password": "simba123",
+    "firstName": "Simba",
+    "lastName": "",
+    "email": "simba@priderock.com",
+    "dob": "1994-06-15",
+    "role": "STUDENT"
+  },
+  {
+    "_id": "136",
+    "username": "mighty_sorcerer",
+    "password": "gandalf123",
+    "firstName": "Gandalf",
+    "lastName": "The Grey",
+    "email": "gandalf@middleearth.com",
+    "dob": "unknown",
+    "role": "FACULTY"
+  },
+  {
+    "_id": "137",
+    "username": "shield_maiden",
+    "password": "eowyn123",
+    "firstName": "Eowyn",
+    "lastName": "of Rohan",
+    "email": "eowyn@rohan.com",
+    "dob": "unknown",
+    "role": "FACULTY"
+  },
+  {
+    "_id": "138",
+    "username": "dwarf_warrior",
+    "password": "gimli123",
+    "firstName": "Gimli",
+    "lastName": "Son of Gloin",
+    "email": "gimli@erebor.com",
+    "dob": "unknown",
+    "role": "STUDENT"
+  }
+]

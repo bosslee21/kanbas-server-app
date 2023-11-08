@@ -1,0 +1,352 @@
+[
+  {
+    "_id": "M101",
+    "name": "Introduction to Web Development",
+    "description": "Basic principles of Web -DEV and rocket engines.",
+    "course": "RS101",
+    "lessons": [
+      {
+        "_id": 1,
+        "name": "Basics of Web Development",
+        "description": "Getting started with web development principles."
+      },
+      {
+        "_id": 2,
+        "name": "HTML Fundamentals",
+        "description": "Understanding the structure of web pages."
+      },
+      {
+        "_id": 3,
+        "name": "CSS Styling",
+        "description": "Designing the appearance of web pages."
+      },
+      {
+        "_id": 4,
+        "name": "JavaScript Basics",
+        "description": "Adding interactivity to web pages."
+      },
+      {
+        "_id": 5,
+        "name": "Rocket Engine Intro",
+        "description": "Basics of rocket propulsion."
+      },
+
+      {
+        "_id": 6,
+        "name": "Web Servers",
+        "description": "Serving web pages to users."
+      },
+      {
+        "_id": 7,
+        "name": "Deploying Websites",
+        "description": "Making websites live on the internet."
+      },
+      {
+        "_id": 8,
+        "name": "Rocket Engine Design",
+        "description": "Understanding advanced rocket principles."
+      }
+    ],
+    "readings": [
+      {
+        "name": "Web Development Handbook",
+        "description": "A comprehensive guide to web development."
+      },
+      {
+        "name": "Rocket Propulsion Elements",
+        "description": "An introduction to rocket propulsion."
+      }
+    ]
+  },
+
+  {
+    "_id": "M102",
+    "name": "Database Design and Management",
+    "description": "Understanding Database, processes, and efficiency.",
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": 1,
+        "name": "Database Basics",
+        "description": "Introduction to storing data."
+      },
+      {
+        "_id": 2,
+        "name": "Relational Databases",
+        "description": "Designing efficient data structures."
+      },
+      {
+        "_id": 3,
+        "name": "Database Management",
+        "description": "Maintaining and querying data."
+      },
+      {
+        "_id": 4,
+        "name": "Optimization Techniques",
+        "description": "Enhancing database performance."
+      },
+      {
+        "_id": 5,
+        "name": "Database Security",
+        "description": "Protecting data integrity and access."
+      },
+      {
+        "_id": 6,
+        "name": "Advanced Querying",
+        "description": "Deep dive into complex queries."
+      },
+      {
+        "_id": 7,
+        "name": "Distributed Databases",
+        "description": "Scaling databases across machines."
+      },
+      {
+        "_id": 8,
+        "name": "Backup and Recovery",
+        "description": "Safeguarding data from loss."
+      }
+    ],
+    "readings": [
+      {
+        "name": "Database Design Principles",
+        "description": "A foundational text on database design."
+      },
+      {
+        "name": "SQL and Relational Theory",
+        "description": "Understanding the logic behind databases."
+      }
+    ]
+  },
+  {
+    "_id": "M103",
+    "name": "Advanced Algorithms",
+    "description": "Principles of Algorithm design and performance optimization.",
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": 1,
+        "name": "Intro to Algorithms",
+        "description": "Understanding algorithmic logic."
+      },
+      {
+        "_id": 2,
+        "name": "Search Algorithms",
+        "description": "Finding data efficiently."
+      },
+      {
+        "_id": 3,
+        "name": "Sort Algorithms",
+        "description": "Organizing data optimally."
+      },
+      {
+        "_id": 4,
+        "name": "Dynamic Programming",
+        "description": "Optimizing complex problems."
+      },
+      {
+        "_id": 5,
+        "name": "Greedy Algorithms",
+        "description": "Solving problems step-by-step."
+      },
+      {
+        "_id": 6,
+        "name": "Graph Algorithms",
+        "description": "Traversing and searching graphs."
+      },
+      {
+        "_id": 7,
+        "name": "Algorithm Analysis",
+        "description": "Measuring performance and efficiency."
+      },
+      {
+        "_id": 8,
+        "name": "Advanced Topics",
+        "description": "Exploring the frontier of algorithms."
+      }
+    ],
+    "readings": [
+      {
+        "name": "Algorithms Unlocked",
+        "description": "Understanding the world of algorithms."
+      },
+      {
+        "name": "Graph Theory and Complex Networks",
+        "description": "An introduction to advanced algorithm techniques."
+      }
+    ]
+  },
+  {
+    "_id": "M201",
+    "name": "Fundamentals of Cyber Security",
+    "description": "Basic Cyber Security concepts and fluid dynamics principles.",
+    "course": "RS104",
+    "lessons": [
+      {
+        "_id": 1,
+        "name": "Security Basics",
+        "description": "Understanding threats and defenses."
+      },
+      {
+        "_id": 2,
+        "name": "Cryptography",
+        "description": "Securing data through encryption."
+      },
+      {
+        "_id": 3,
+        "name": "Network Security",
+        "description": "Protecting data in transit."
+      },
+      {
+        "_id": 4,
+        "name": "Malware Analysis",
+        "description": "Studying malicious software."
+      },
+      {
+        "_id": 5,
+        "name": "Digital Forensics",
+        "description": "Investigating digital crimes."
+      },
+      {
+        "_id": 6,
+        "name": "Fluid Dynamics Intro",
+        "description": "Understanding the behavior of fluids."
+      },
+      {
+        "_id": 7,
+        "name": "Secure Coding",
+        "description": "Writing software that resists attacks."
+      },
+      {
+        "_id": 8,
+        "name": "Incident Response",
+        "description": "Reacting to security breaches."
+      }
+    ],
+    "readings": [
+      {
+        "name": "Cyber Security Essentials",
+        "description": "A guide to the basics of cyber security."
+      },
+      {
+        "name": "Fluid Dynamics for Engineers",
+        "description": "A look into the behavior of fluids."
+      }
+    ]
+  },
+  {
+    "_id": "M202",
+    "name": "Computer Networking Introduction",
+    "description": "Understanding subsonic and supersonic aerodynamic behaviors.",
+    "course": "RS105",
+    "lessons": [
+      {
+        "_id": 1,
+        "name": "Networking Basics",
+        "description": "How computers communicate."
+      },
+      {
+        "_id": 2,
+        "name": "OSI Model",
+        "description": "Layers of network communication."
+      },
+      {
+        "_id": 3,
+        "name": "TCP/IP",
+        "description": "The internet protocol suite."
+      },
+      {
+        "_id": 4,
+        "name": "Subsonic Aerodynamics",
+        "description": "Behaviors below the speed of sound."
+      },
+      {
+        "_id": 5,
+        "name": "Supersonic Aerodynamics",
+        "description": "Behaviors above the speed of sound."
+      },
+      {
+        "_id": 6,
+        "name": "Network Security",
+        "description": "Protecting data in networks."
+      },
+      {
+        "_id": 7,
+        "name": "Routing and Switching",
+        "description": "Directing network traffic."
+      },
+      {
+        "_id": 8,
+        "name": "Advanced Networking",
+        "description": "Complex network topics."
+      }
+    ],
+    "readings": [
+      {
+        "name": "Networking for Dummies",
+        "description": "A beginner's guide to computer networks."
+      },
+      {
+        "name": "Aerodynamics for Naval Aviators",
+        "description": "Understanding air behaviors at different speeds."
+      }
+    ]
+  },
+  {
+    "_id": "M302",
+    "name": "Foundation of software engineering",
+    "description": "Understanding orbital dynamics and mission planning.",
+    "course": "RS106",
+    "lessons": [
+      {
+        "_id": 1,
+        "name": "Software Engineering Basics",
+        "description": "Foundations of building software."
+      },
+      {
+        "_id": 2,
+        "name": "Development Methodologies",
+        "description": "Approaches to software construction."
+      },
+      {
+        "_id": 3,
+        "name": "Orbital Dynamics",
+        "description": "Movements of bodies in space."
+      },
+      {
+        "_id": 4,
+        "name": "Mission Planning",
+        "description": "Organizing space missions."
+      },
+      {
+        "_id": 5,
+        "name": "Code Quality",
+        "description": "Writing maintainable and robust code."
+      },
+      {
+        "_id": 6,
+        "name": "Testing and QA",
+        "description": "Ensuring software reliability."
+      },
+      {
+        "_id": 7,
+        "name": "Deployment",
+        "description": "Releasing software to users."
+      },
+      {
+        "_id": 8,
+        "name": "Advanced Topics",
+        "description": "Cutting-edge software techniques."
+      }
+    ],
+    "readings": [
+      {
+        "name": "Software Engineering at Google",
+        "description": "Insights from Google's approach to software."
+      },
+      {
+        "name": "Orbital Mechanics for Engineering Students",
+        "description": "Understanding the science behind orbiting objects."
+      }
+    ]
+  }
+]

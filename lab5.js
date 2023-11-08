@@ -12,10 +12,14 @@ const assignment = {
 
 // Arrays Section
 const todos = [
-    { id: 1, title: "Task 1", completed: false },
-    { id: 2, title: "Task 2", completed: true },
-    { id: 3, title: "Task 3", completed: false },
-    { id: 4, title: "Task 4", completed: true },
+    { id: 1, title: "Task 1", completed: false,    description: "Create a NodeJS server with ExpressJS"
+},
+    { id: 2, title: "Task 2", completed: true,    description: "Create a NodeJS server with ExpressJS"
+},
+    { id: 3, title: "Task 3", completed: false,    description: "Create a NodeJS server with ExpressJS"
+},
+    { id: 4, title: "Task 4", completed: true,    description: "Create a NodeJS server with ExpressJS"
+},
   ];
   
 
@@ -61,15 +65,17 @@ function Lab5(app) {
       app.get("/a5/assignment/completed/:newCompleted", (req, res) => {
         const { newCompleted } = req.params;
         if(newCompleted) {
-            comp = newCompleted === "true"; 
-            res.json(assignment.completed = comp);
-            return;
+            const  comp = newCompleted === "true"; 
+            assignment.completed = comp;
+            res.json(assignment);
         }
         else{
             res.sendStatus(404).send("Todo not found");
         }
       
       });
+
+      
 
       // This is  Passing JSON data to a Server in an HTTP Body
       // we use post if we creating data
@@ -87,15 +93,42 @@ function Lab5(app) {
     app.delete("/a5/todos/:id", (req, res) => {
         const{id} = req.params;
         const index = todos.findIndex((todo) => todo.id === parseInt(id));
-        if(index === -1){  
-            res.sendStatus(404).send("Todo not found");
+        if (!todo) {
+            res.res
+              .status(404)
+              .json({ message:
+                `Unable to delete Todo with ID ${id}` });
             return;
-        }
+          }
+      
+        // if(index === -1){  
+        //     res.sendStatus(404).send("Todo not found");
+        //     return;
+        // }
+        
         // at index (start) remove (1) 
         // todos.spice(index,1, newTodo) : at index remove 1, and replace with newTodo
-        todos.splice(index, 1);
-        res.json(todos);
+        todos.splice(index, 1); // remove index location only 1
+        res.json(todos); // return response the remaining todos
     });
+    app.put("/a5/todos/:id", (req, res) => {
+        const { id } = req.params;
+        const todo = todos.find((t) => t.id === parseInt(id));
+        if (!todo) {
+            res.res
+              .status(404)
+              .json({ message:
+                `Unable to update Todo with ID ${id}` });
+            return;
+          }
+      
+        todo.title = req.body.title;
+        todo.description = req.body.description;
+        todo.due = req.body.due;
+        todo.completed = req.body.completed;
+        res.sendStatus(200);
+      });
+    
 
       
       // ARRAYS After this line
@@ -231,7 +264,7 @@ function Lab5(app) {
         res.send(`${a} - ${b} = ${parseInt(a)- parseInt(b)}`);
     });
 
-    //Extra CREDIT
+    //Extra CREDIT Completed still not working
     app.get("/a5/todos/:id/completed/:completed", (req, res) => {
         const { id, completed } = req.params;
         const todo = todos.find((todo) => todo.id === parseInt(id));
@@ -249,7 +282,7 @@ function Lab5(app) {
           res.sendStatus(404).send("Todo not found");
           return;
         }
-        todo.completed = completed === "true";
+        todo.description = description
         res.json(todo);
     });
  
