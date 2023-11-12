@@ -264,7 +264,20 @@ function Lab5(app) {
         res.send(`${a} - ${b} = ${parseInt(a)- parseInt(b)}`);
     });
 
+  
+
+
     //Extra CREDIT Completed still not working
+    app.get("/a5/todos/:id/completed", (req, res) => {
+      const { id } = req.params;
+      const todo = todos.find((todo) => todo.id === parseInt(id));
+      if (!todo) {
+        res.sendStatus(404).send("Todo not found");
+        return;
+      }
+     
+      res.json(todo.completed);
+  });
     app.get("/a5/todos/:id/completed/:completed", (req, res) => {
         const { id, completed } = req.params;
         const todo = todos.find((todo) => todo.id === parseInt(id));
