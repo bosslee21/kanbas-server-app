@@ -11,10 +11,13 @@ import cors from "cors";
 import CourseRoutes from "./courses/routes.js";
 import ModuleRoutes from "./modules/routes.js";
 import AssignmentRoute from "./assignment/routes.js";
+import "dotenv/config";
 //creating an instance of express to the library. 
 const app = express();
 app.use(cors({
-    origin: "http://localhost:3000",
+    credentials: true,
+    origin: process.env.FRONTEND_URL
+
 })); // allow react to connect to server. and only allow 3000 to be called. 
 app.use(express.json()); // this is json parsing so the body knows what is passing in.
 ModuleRoutes(app);
@@ -26,5 +29,5 @@ Lab5(app);
 
 
 // listening to the port 4000 since 3000 is used by react client
-app.listen(4000);
+app.listen(process.env.port || 4000);
 
