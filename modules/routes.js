@@ -1,6 +1,13 @@
 import Database from "../Database/index.js";
 
 function ModuleRoutes(app) {
+    //given the course id, give me the module.
+    app.get("/api/courses/:id/module", (req, res) => {
+     const { id } = req.params;
+    
+      const module = Database.modules.find((module) => module.course === id);
+      res.json(module);
+    });
     
     // Retrieve all the modules. 
     app.get("/api/modules", (req, res) => {
@@ -8,26 +15,31 @@ function ModuleRoutes(app) {
         res.json(modules);
     });
       // retrieve the module given the id
-      app.get("/api/modules/:id", (req, res) => {
-        const { id } = req.params;
-        const module = Database.modules.find((module) => module.course === id);
-        if (!module) {
-            res.sendStatus(404).send("Module not found");
-            return;
-        }
-        res.json(module);
-    });
+    //   app.get("/api/modules/:id", (req, res) => {
+    //     const { id } = req.params;
+    //     const module = Database.modules.find((module) => module.course === id);
+    //     if (!module) {
+    //         res.sendStatus(404).send("Module not found");
+    //         return;
+    //     }
+    //     res.json(module);
+    // });
     // given the id of modules retrive all the lessons in 
     app.get("/api/modules/:id/lessons", (req, res) => {
         const { id } = req.params;
-        const findModuleIndex = Database.modules.findIndex((module) => module.course === id);
+        const findModuleIndex = Database.modules.findIndex((module) => {console.log(module); 
+            return module.course === id});
+        console.log(findModuleIndex)
         const lessons = Database.modules[findModuleIndex].lessons;
+        console.log("Lessons: ")
+        console.log(lessons)
         if (!lessons) {
             res.sendStatus(404).send("Module not found");
             return;
         }
         res.json(lessons);
     });
+    
     // find the modules for the course, and within lessons give me the lesson match lesson id
     app.get("/api/modules/:cid/lessons/:lid", (req, res) => {
         const { cid, lid } = req.params;
@@ -65,6 +77,24 @@ function ModuleRoutes(app) {
         res.json(204)
     });
    
+    // new
+    // app.post("/api/courses/:cid/module", (req, res) => {
+    //     const { cid } = req.params;
+    //     const newModule = {
+            
+    //     }
+    //     const newLesson = {
+    //         ...req.body,
+    //         _id: new Date().getTime(),
+    //     };
+    //     const findModuleIndex = Database.modules.findIndex((module) => module.course === cid);
+    //     Database.modules[findModuleIndex].lessons.unshift(newLesson); // add to the beginning of the array in the server database   
+    //     const updatedLesson = Database.modules[findModuleIndex].lessons;
+    //     res.json(updatedLesson); // sending whole lesson back to the client
+    // });
+
+
+    // old
     app.post("/api/modules/:cid/lessons", (req, res) => {
         const { cid } = req.params;
         const newLesson = {
@@ -78,7 +108,7 @@ function ModuleRoutes(app) {
     });
 
 
-    // might be wrong check below. 
+    
     app.put("/api/modules/:cid", (req, res) => {
         const { cid } = req.params;
         const moduleIndex = Database.modules.findIndex((module) => module.course === cid);

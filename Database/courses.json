@@ -1,7 +1,7 @@
 [
   {
     "_id": "RS101",
-    "name": "Web Development",
+    "name": "Web Development Server",
     "number": "RS4550",
     "startDate": "2023-01-10",
     "endDate": "2023-05-15"
