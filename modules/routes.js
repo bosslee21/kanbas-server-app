@@ -29,10 +29,9 @@ function ModuleRoutes(app) {
         const { id } = req.params;
         const findModuleIndex = Database.modules.findIndex((module) => {console.log(module); 
             return module.course === id});
-        console.log(findModuleIndex)
+       
         const lessons = Database.modules[findModuleIndex].lessons;
-        console.log("Lessons: ")
-        console.log(lessons)
+       
         if (!lessons) {
             res.sendStatus(404).send("Module not found");
             return;
