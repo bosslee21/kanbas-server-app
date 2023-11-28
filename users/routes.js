@@ -40,7 +40,7 @@ function UserRoutes(app) {
     const id = req.params.id;
     const newUser = req.body;
     const status = await dao.updateSingleUserDao(id, newUser);
-    currentUser = await dao.findUserByIdDao(id);
+    // currentUser = await dao.findUserByIdDao(id);
     res.json(status); // return status, true or false for update
   };
 
@@ -80,7 +80,15 @@ function UserRoutes(app) {
   };
   app.post("/api/users/signout", signout);
 
-  const signup = async (req, res) => {};
+  const signup = async (req, res) => {
+    const user = await dao.findUserByUserNameDao(req.body.username);
+    if (user) {
+      res.status(400).json({ message: "Username already taken" });
+    }
+    currentUser = await dao.createUserDao(req.body);
+    res.json(currentUser);
+  };
+  app.post("/api/users/signup", signup);
 
   const account = async (req, res) => {
     // when signin, we can get the current user.
