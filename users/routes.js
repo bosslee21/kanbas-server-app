@@ -29,7 +29,7 @@ function UserRoutes(app) {
     res.json(user);
   };
   const createUser = async (req, res) => {
-    const { username, password, role } = req.params;
+    const { username, password, role } = req.body;
     const user = { username, password, role };
     const newUser = await dao.createUserDao(user);
     res.json(newUser);
@@ -79,6 +79,7 @@ function UserRoutes(app) {
     res.sendStatus(200);
   };
   app.post("/api/users/signout", signout);
+
   const signup = async (req, res) => {};
 
   const account = async (req, res) => {
@@ -91,6 +92,7 @@ function UserRoutes(app) {
     }
   };
   app.post("/api/users/account", account);
+  app.post("/api/users", createUser);
 
   app.delete("/api/users/:id", deleteUser); // when api/user, run findAllUser function
   // RESTFUL API should only have primary key. in PARAM. :id is allowed.
