@@ -1,6 +1,6 @@
 import * as dao from "./dao.js";
 
-let currentUser = null;
+// let currentUser = null;
 
 function UserRoutes(app) {
   const findAllUser = async (req, res) => {
@@ -40,7 +40,9 @@ function UserRoutes(app) {
     const id = req.params.id;
     const newUser = req.body;
     const status = await dao.updateSingleUserDao(id, newUser);
-    // currentUser = await dao.findUserByIdDao(id);
+    // const currentUser = await dao.findUserByIdDao(id);
+    // req.session["currentUser"] = currentUser;
+
     res.json(status); // return status, true or false for update
   };
 
@@ -66,7 +68,8 @@ function UserRoutes(app) {
     const password = req.body.password;
     const user = await dao.findUserByCredentialsDao(username, password);
     if (user) {
-      currentUser = user;
+      const currentUser = user;
+      req.session["currentUser"] = currentUser;
       res.json(user);
     } else {
       res.sendStatus(403);
@@ -75,7 +78,8 @@ function UserRoutes(app) {
   app.post("/api/users/signin", signin);
 
   const signout = async (req, res) => {
-    currentUser = null;
+    req.session.destroy();
+    // currentUser = null;
     res.sendStatus(200);
   };
   app.post("/api/users/signout", signout);
@@ -85,19 +89,20 @@ function UserRoutes(app) {
     if (user) {
       res.status(400).json({ message: "Username already taken" });
     }
-    currentUser = await dao.createUserDao(req.body);
+    const currentUser = await dao.createUserDao(req.body);
+    req.session["currentUser"] = currentUser;
     res.json(currentUser);
   };
   app.post("/api/users/signup", signup);
 
   const account = async (req, res) => {
     // when signin, we can get the current user.
-    if (currentUser) {
-      res.json(currentUser);
-    } else {
+    const currentUser = req.session["currentUser"];
+    if (!currentUser) {
       res.sendStatus(403);
       return;
     }
+    res.json(currentUser);
   };
   app.post("/api/users/account", account);
   app.post("/api/users", createUser);
