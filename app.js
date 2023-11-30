@@ -18,7 +18,25 @@ import "dotenv/config";
 
 // npm run server
 // connect to the database (localhost needs to be api address)
-mongoose.connect("mongodb://127.0.0.1:27017/Kanbas");
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING;
+
+// mongoose.connect(CONNECTION_STRING);
+
+mongoose
+  .connect(CONNECTION_STRING, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Connected to MongoDB Atlas");
+    console.log("Connection URL " + CONNECTION_STRING);
+  })
+  .catch((error) => {
+    console.error("Error connecting to MongoDB Atlas:", error);
+  });
+
+// mongoose.connect("mongodb://127.0.0.1:27017/Kanbas");
+
 //creating an instance of express to the library.
 const app = express();
 app.use(
